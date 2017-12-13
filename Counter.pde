@@ -4,6 +4,8 @@ import controlP5.*;
 
 ControlP5 cp5;
 
+///Variables
+
 PFont y;
 int x = 100;
 
@@ -39,6 +41,7 @@ boolean SN4 = false;
 boolean SN2 = false;
 boolean SN1 = false;
 
+///Setup
 
 void setup(){
   size(600,600);
@@ -51,6 +54,8 @@ void setup(){
     noStroke();
     
     y = createFont("Arial",16,true); 
+    
+    ///Network
      
     cp5.addToggle("IP128")
      .setPosition(40,10)
@@ -174,6 +179,7 @@ void draw(){
   background(x);
   strokeWeight(3);
   stroke(t);
+  ///Draws collored circles
 pushMatrix();
   line(0,45,600,45);
 popMatrix();
@@ -206,6 +212,8 @@ pushMatrix();
 
   line(0,395,600,395);
 popMatrix();
+
+///Text
   
   textFont(y,16);                  
   fill(t);                         
@@ -254,7 +262,9 @@ popMatrix();
   textFont(y,16);
   fill(t);
   text("1",500,370);
-    
+
+///switching colours
+///Network
 pushMatrix();
   if(IP128==false) {
     fill(0,255,0);
@@ -545,6 +555,8 @@ pushMatrix();
     
 popMatrix();
 
+///calculating network address
+
  w = (256-h);
   v =(0);
   do{
@@ -565,6 +577,7 @@ popMatrix();
 
 }
 
+///setting swtich variables
 
 void IP128(boolean theFlag) {
   if(theFlag==true) {
